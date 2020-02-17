@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "27a2f64a-68bc-4df7-978d-c9d1e78d77cf",
+		"name": "ws-datos-ejecutivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DESA-Datos Ejecutivo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3N2M3NWUyYy0zMzhiLTQ5ZjAtOTVmZi1hYjI5ZjBjMWNjYTkiLCJleHAiOjE1ODE0Mjc0NjMsIm5iZiI6MCwiaWF0IjoxNTgxNDI3MTYzLCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxMjgzNzg1NC0xZDZhLTRjZmItYjkyNy1jZDdlNWI5YzAwOTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiNjdjNGJiZTQtZTRjMC00OGJkLTk3MGQtMGE4MWM4NTFjZWQzIiwiY2xpZW50X3Nlc3Npb24iOiI3ZGRjYWRlNi02OWYyLTRmZjEtYTYyYy1mN2QzMDg3YWNmN2EiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTY5Mzc5NTkiLCJuYW1lIjoiQ3J1eiBMLCBQYWJsbyBDcnV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGZjcnV6IiwiZ2l2ZW5fbmFtZSI6IkNydXogTCwgUGFibG8iLCJmYW1pbHlfbmFtZSI6IkNydXoiLCJlbWFpbCI6InBhYmxvLmNydXpAY29uc29yY2lvLmNsIn0.BSZNCbUj93hAIruFmLy_y9zHWq69Mrsr8Y6zPWiIsZqqKvPQEcxEuILMeLkKCbYhmo1SglKGCIUpa1ETmZZ1i_YlBCrXJdgFhN3e_Rrh1Jbtr-SC41fTLMWY6Z-iWRwXlH4DsRmHBUfkH0gAZrsQL48hGDY3bWZlEIF4GeWvjBIt-gTDBi7njezO9PBBIrqk8aFUPYSQdRycCno_9e2miLSiftdumbgCoh-cBz4vwtEMXdq4xtLgyZCWzDMvWL1xa7SfjOUTEtwtdK7bjpBky7tcx1YwW2n9HpwkBCOMwGvAG7bKM6lDctOrmxiS9v0-B4QwAaQrOUWiTRNcNhqp0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 10,\n\t\"nproducto\":  13\n}"
+				},
+				"url": {
+					"raw": "https://dconvm203a.cnsv.cl:8181/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"dconvm203a",
+						"cnsv",
+						"cl"
+					],
+					"port": "8181",
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DESA-Datos Ejecutivo Balanceador Int",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJmOGUzMzY1NC0wMzhkLTQzMWMtOTAxMS0yNWFmMWEyZDY3MTUiLCJleHAiOjE1ODE0Mjk3MDQsIm5iZiI6MCwiaWF0IjoxNTgxNDI5NDA0LCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxMjgzNzg1NC0xZDZhLTRjZmItYjkyNy1jZDdlNWI5YzAwOTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiMmIwZmRmZjMtODk1Ni00YmYzLWI4YTAtYjA5NzU1OGZkNDgxIiwiY2xpZW50X3Nlc3Npb24iOiJhN2FhMzU0Ny0yYjBlLTQ1YzMtOWZmNy0yMjgzOGJmYzg4ZjYiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTY5Mzc5NTkiLCJuYW1lIjoiQ3J1eiBMLCBQYWJsbyBDcnV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGZjcnV6IiwiZ2l2ZW5fbmFtZSI6IkNydXogTCwgUGFibG8iLCJmYW1pbHlfbmFtZSI6IkNydXoiLCJlbWFpbCI6InBhYmxvLmNydXpAY29uc29yY2lvLmNsIn0.ltBhlM9Cy0Ez_He10u7n0W6nlWH1KdGRUaGhmYjdHhC3QccMUshQPa7G_zW4RU-CL7caNFwTpLiW2PwG1lGdv68yLrUohgsvgCp3R9P0Pq3k0IMlSvCs9Kpq7gXzz6FCni3P-VzVbrbtpWUuMIp6u3ESB8SjOIi9Rm_j2uhOi_ax5Fza4ylJKIQhqXd7btHcLrXBbrPzvlXKwb2mmbSpY7a5WNb-0KJMu6ZtTzwGdfd7nA3s1xk0eT9YVUIepWOkBHD__ejCVrWvtD9Jydua9n08S2gtBfONVx0zzgAaaZq8lXFjmiBwYaelvd9u07Hqh9T35Ba8mf-tyjUFjRdeGQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 10,\n\t\"nproducto\":  13\n}"
+				},
+				"url": {
+					"raw": "https://desarrollo.cnsv.cl/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"desarrollo",
+						"cnsv",
+						"cl"
+					],
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DESA-Datos Ejecutivo API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI5ZDMxZGM2My1hYzVmLTQ5MzYtYmY4Mi1hYzA2Y2U0ODg3NjIiLCJleHAiOjE1ODE2Mjc0MDMsIm5iZiI6MCwiaWF0IjoxNTgxNjI3MTAzLCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxNDk5MDM5Yi0zMDA3LTRiNGMtYTZjMC1lMzM1YThhZTFmMzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiZjJmNmRjMWItMjBiYi00OTAwLTk2NmEtNTM3ZGFlZjUzN2U4IiwiY2xpZW50X3Nlc3Npb24iOiJhN2UxZThhOS0yZTQxLTRmYzUtYTRhYy1mOTNiNWU1MDEyMTEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTI4Nzc0MTQiLCJuYW1lIjoiU2FuY2hleiBOLCBQYW9sYSBTYW5jaGV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGFzYW5jaGUiLCJnaXZlbl9uYW1lIjoiU2FuY2hleiBOLCBQYW9sYSIsImZhbWlseV9uYW1lIjoiU2FuY2hleiIsImVtYWlsIjoicGFvbGEuc2FuY2hlekBjb25zb3JjaW8uY2wifQ.ef2xpmjM_BOqS5ycqcRdg0Zrg9lAtbMDMNEQkquWAXMjb4hAKDptWQHYCTErSMbBptIWkt_bMyuMjUREAAuYb2Om0A1V2Xus6AsjE55tWBZcqI7SwN2x7R2HDuT8O3Tb4p2crvQRvhygWz9BQraDzJ6eCLJG8I3MPNNGjdkI2CgGVGaiBmBHvr_y0TgbKRivZ3fVCt4iTOORbhraCm8rhqQK_nwpfB4MpIb2m6upy_AbRqTTHE0iExq6gbzAwNjCfPL-F45izqvldFw3GniTPJFTYUZ4Mon39BdAzfPLifgvjBLondFDXqHPP4xK17X40BtqX7scBy8q4jxjlstnTA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 10,\n\t\"nproducto\":  13\n}"
+				},
+				"url": {
+					"raw": "https://9qj845ry28.execute-api.us-east-1.amazonaws.com/v1/api/datosEjecutivo/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"9qj845ry28",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"datosEjecutivo",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QA-Datos Ejecutivo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJkYzdkMTZkYi05YjJmLTRlNjAtYjJmYi1lODIwOTAyMWEzZjIiLCJleHAiOjE1ODE2MjgxNDQsIm5iZiI6MCwiaWF0IjoxNTgxNjI3ODQ0LCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxNDk5MDM5Yi0zMDA3LTRiNGMtYTZjMC1lMzM1YThhZTFmMzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiY2Y3OWIzNTEtNTgyOS00MGIxLTg5N2UtMTMxZDcyOTM3ZDA3IiwiY2xpZW50X3Nlc3Npb24iOiI4NTE5MmEzOS03ZTViLTRiOWQtYTQzNy1mMmU0ZjI2MGVhMTQiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTI4Nzc0MTQiLCJuYW1lIjoiU2FuY2hleiBOLCBQYW9sYSBTYW5jaGV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGFzYW5jaGUiLCJnaXZlbl9uYW1lIjoiU2FuY2hleiBOLCBQYW9sYSIsImZhbWlseV9uYW1lIjoiU2FuY2hleiIsImVtYWlsIjoicGFvbGEuc2FuY2hlekBjb25zb3JjaW8uY2wifQ.gtV46uOME3Ce_a9uaxPetpVNjCvJBMvah6trtrDEQuSs9fpsVdMz89-irHSs4HO2elR0r6KgLLdz3sAJ-32Izv_F2nJu_hrUWk7fRPY331xMwNSpGpAw5wOoPK5PGYkYSbz3U6tRXITwoG0cPVAStc3-sjm2VAfF8NjB46G6eURgQtRZuXfO-cKCK139GMCujzB9qitrLp0HcQCIVD7sEZSW89lFKmSIMaul6CSg8YjfKHQc7o_zfc7VOHGx51QJC5MsUUdGEQI3xiNFohEXegpQs8pzltWE3hoE8UMoCjudJakHaFqo04qesgRye_Gx_l36OMxodiNdypTgXnWfrg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 9,\n\t\"nproducto\":  29\n}"
+				},
+				"url": {
+					"raw": "https://tconvm269:28184/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"tconvm269"
+					],
+					"port": "28184",
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QA-Datos Ejecutivo Balanceador Ext",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJmNDBmZDQ2NS1jMDY5LTRkM2MtYTBiZi1kNTRlOWNkMzc4MTciLCJleHAiOjE1ODAzMTQxNDIsIm5iZiI6MCwiaWF0IjoxNTgwMzEzODQyLCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxNDk5MDM5Yi0zMDA3LTRiNGMtYTZjMC1lMzM1YThhZTFmMzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiNGNlZWMyNmItODY5Ni00ZDFiLTg2NWYtMmFhM2NkMTkxNDQ3IiwiY2xpZW50X3Nlc3Npb24iOiI1Y2NlMTAxZS05NDI1LTQ5Y2ItOTBkMS05OGE3ZGRjYWZhY2UiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTI4Nzc0MTQiLCJuYW1lIjoiU2FuY2hleiBOLCBQYW9sYSBTYW5jaGV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGFzYW5jaGUiLCJnaXZlbl9uYW1lIjoiU2FuY2hleiBOLCBQYW9sYSIsImZhbWlseV9uYW1lIjoiU2FuY2hleiIsImVtYWlsIjoicGFvbGEuc2FuY2hlekBjb25zb3JjaW8uY2wifQ.ob4AWLIcvlH1Lr2GyQWoo5PWbEad8WlnTX3fQKfvyy7b6yp8lN3viVKMkNaRtHT-ZXbaSLmOVZPKUit7JreI3kxhhIPWDZgXOVxNae0je_ie9LsbTN72TqIhqb6Ll178ll6cM0UVgBKax3mkdF_fSp0NN47GJwozOrBU0rAWur9E7arM74FrQCyaRmkK2OuCmVkFHgMl5gPL4toImEeJYNMVfV2miYk3Dg6eUssMaU_DfvOk7VIhjVe8JJLXBMcIhdE_8qTY7rQ1VK1qbCdRfAnr5t91tc1cu-gFdT8GfOJ2dWuB_bHe2ZgslFwywT-RJUrMXTmJbgQi5zjchvlYzQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 9,\n\t\"nproducto\":  29\n}"
+				},
+				"url": {
+					"raw": "https://serviciosqa.consorcio.cl/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"serviciosqa",
+						"consorcio",
+						"cl"
+					],
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QA-Datos Ejecutivo Balanceador Int",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJkYzdkMTZkYi05YjJmLTRlNjAtYjJmYi1lODIwOTAyMWEzZjIiLCJleHAiOjE1ODE2MjgxNDQsIm5iZiI6MCwiaWF0IjoxNTgxNjI3ODQ0LCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxNDk5MDM5Yi0zMDA3LTRiNGMtYTZjMC1lMzM1YThhZTFmMzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiY2Y3OWIzNTEtNTgyOS00MGIxLTg5N2UtMTMxZDcyOTM3ZDA3IiwiY2xpZW50X3Nlc3Npb24iOiI4NTE5MmEzOS03ZTViLTRiOWQtYTQzNy1mMmU0ZjI2MGVhMTQiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTI4Nzc0MTQiLCJuYW1lIjoiU2FuY2hleiBOLCBQYW9sYSBTYW5jaGV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGFzYW5jaGUiLCJnaXZlbl9uYW1lIjoiU2FuY2hleiBOLCBQYW9sYSIsImZhbWlseV9uYW1lIjoiU2FuY2hleiIsImVtYWlsIjoicGFvbGEuc2FuY2hlekBjb25zb3JjaW8uY2wifQ.gtV46uOME3Ce_a9uaxPetpVNjCvJBMvah6trtrDEQuSs9fpsVdMz89-irHSs4HO2elR0r6KgLLdz3sAJ-32Izv_F2nJu_hrUWk7fRPY331xMwNSpGpAw5wOoPK5PGYkYSbz3U6tRXITwoG0cPVAStc3-sjm2VAfF8NjB46G6eURgQtRZuXfO-cKCK139GMCujzB9qitrLp0HcQCIVD7sEZSW89lFKmSIMaul6CSg8YjfKHQc7o_zfc7VOHGx51QJC5MsUUdGEQI3xiNFohEXegpQs8pzltWE3hoE8UMoCjudJakHaFqo04qesgRye_Gx_l36OMxodiNdypTgXnWfrg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": \"10\",\n\t\"nproducto\": \"19\"\n}"
+				},
+				"url": {
+					"raw": "https://serviciosqa.cnsv.cl/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"serviciosqa",
+						"cnsv",
+						"cl"
+					],
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QA-Datos Ejecutivo API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJjODQyMGI0ZS03ZThhLTRiNTQtOWFiOC1mZWM3NjdjNmI3NTciLCJleHAiOjE1ODE5NDM2OTYsIm5iZiI6MCwiaWF0IjoxNTgxOTQzMzk2LCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxNDk5MDM5Yi0zMDA3LTRiNGMtYTZjMC1lMzM1YThhZTFmMzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiZmViZThlZmYtZDIzOC00YzA5LTljNDAtOTRiODgwNmJkYmYzIiwiY2xpZW50X3Nlc3Npb24iOiIzMmYxZjc4OC1iN2I5LTQ3MjUtYTg1NC1mOWYxYzg4N2JjMDYiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTI4Nzc0MTQiLCJuYW1lIjoiU2FuY2hleiBOLCBQYW9sYSBTYW5jaGV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGFzYW5jaGUiLCJnaXZlbl9uYW1lIjoiU2FuY2hleiBOLCBQYW9sYSIsImZhbWlseV9uYW1lIjoiU2FuY2hleiIsImVtYWlsIjoicGFvbGEuc2FuY2hlekBjb25zb3JjaW8uY2wifQ.cl5GBAemZ2OM4kqvl9j9ZgeYuwkLh96eSqDz3l3TIBIPh9VmhE5ePKfR-siiMzD0nm-O4aY8h5Ag3GT66Y-9kMDosfc4n4PYDEtLdkqAXLskDFI7ippR2an3vV6BmyzdwCgFSeg2v1ejCm3EESrJhSmkWu0FYJhQLQoJeSLP5Mq1EOFb8YFaFlRDMDZICJuP5qPUgy6eiNq1SJNgKfaEQ1J_uLHQc6NDhjc0B6Eps48htGaQnL_oLNwxoQrX8llt_nGIJYCOppZDcYpYz7Y2qj9JERoWvy618svTxuxqujlodxfT9wXrYWE_fAJTS-WM7w-FncZYzeoT1uCkcqpW9w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": \"10\",\n\t\"nproducto\": \"19\"\n}"
+				},
+				"url": {
+					"raw": "https://u0yw8njzji.execute-api.us-east-1.amazonaws.com/v1/api/datosEjecutivo/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"u0yw8njzji",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"datosEjecutivo",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD-Datos Ejecutivo Balanceador Int",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwYTQ3NTljOS03MTgwLTRhNWQtYjZiNi1lMTA1ZTBmMDJiMmEiLCJleHAiOjE1ODEzNTg0OTUsIm5iZiI6MCwiaWF0IjoxNTgxMzU4MTk1LCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxNDk5MDM5Yi0zMDA3LTRiNGMtYTZjMC1lMzM1YThhZTFmMzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiNGEyNmNlMjEtNjc0Mi00OGM2LWI3MTMtMTBiOGY2OTNkNDIwIiwiY2xpZW50X3Nlc3Npb24iOiIzMmUwZTVjOS0zNmFlLTRmNzUtYjI2ZS1iZmNiZjZlYmY2ZDMiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTI4Nzc0MTQiLCJuYW1lIjoiU2FuY2hleiBOLCBQYW9sYSBTYW5jaGV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGFzYW5jaGUiLCJnaXZlbl9uYW1lIjoiU2FuY2hleiBOLCBQYW9sYSIsImZhbWlseV9uYW1lIjoiU2FuY2hleiIsImVtYWlsIjoicGFvbGEuc2FuY2hlekBjb25zb3JjaW8uY2wifQ.phFW8WL5ml_E3lSiY7WPlLmmDFObSU3T2ZcXiLBi7wKybimBZvCswHOzf9syBBftoOW3cF7LiRV4DXvfBkKHSCK-WeHOlD4QMAUDDylvriXils6s0PDncFc5omBssbIhCUND7pyVqP3iuzjJB_sKc4s54FZ1Mz4ATi4PFE4pInxLMvxKGExHByuSf2oe40LyfsVyarFHHw8UiLqjAMvUguqKnSzSPdtzvh6B5H_28w2YZ3gOVIjf_P9-kFHtibWqZi3S3Z7IbvQ3YackNdcxnZZGNVpdIeih_QrBrDig76sJh0vLIfz0-uq7fyRsRIXHrRzNd64BjnP74Y_9M-HzIA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 9,\n\t\"nproducto\":  29\n}"
+				},
+				"url": {
+					"raw": "https://servicios.cnsv.cl/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"cnsv",
+						"cl"
+					],
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD-Datos Ejecutivo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIxYzRmMzRjMy00NmU0LTRiYTgtOWQxMi01YjQwMGU1YWNhMjMiLCJleHAiOjE1Nzk1MzgxNTQsIm5iZiI6MCwiaWF0IjoxNTc5NTM3ODU0LCJpc3MiOiJodHRwczovL3Nzb3FhLmNvbnNvcmNpby5jbC9hdXRoL3JlYWxtcy9Tc29Db25zb3JjaW9BRCIsImF1ZCI6InBvcnRhbC1vcGVyYWNpb25hbCIsInN1YiI6IjE0OTkwMzliLTMwMDctNGI0Yy1hNmMwLWUzMzVhOGFlMWYzMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InBvcnRhbC1vcGVyYWNpb25hbCIsInNlc3Npb25fc3RhdGUiOiI0MGU4NDE1Zi1kMjVhLTRlMzQtODRkNC04NTc0Y2IyNDZiYjgiLCJjbGllbnRfc2Vzc2lvbiI6ImE1ODY2NjFkLTJlYzMtNDEwZS1iODNjLTg2ODgzYTljNmM4ZiIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fSwiY25zdi1SdXQiOiIxMjg3NzQxNCIsIm5hbWUiOiJTYW5jaGV6IE4sIFBhb2xhIFNhbmNoZXoiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJwYXNhbmNoZSIsImdpdmVuX25hbWUiOiJTYW5jaGV6IE4sIFBhb2xhIiwiZmFtaWx5X25hbWUiOiJTYW5jaGV6IiwiZW1haWwiOiJwYW9sYS5zYW5jaGV6QGNvbnNvcmNpby5jbCJ9.CSzKWDeqs154RpWegSPPPa6IIplsY0SbJb50XwTtKZakM3cQuZk6FUX0inWXP70SBXvzPjX0yce_JJhh_94-3qfDg94RlY6q3ph30ZwcPCItVZTYG75hhsFG1MHH_GrAm0doh_09VDcp_zihztwntfF14iALbw9f0MsmhRcd0TXdx2tlwNhlpYCgrsk-1TqpMAuVU6pO274Fjmfpo78cSdWUTjktZyfzWlE_53pfgHYbEZlQshI-H_y57j454NTkYbl-KVUUr27YAaAkAYKqbIiSRcVlx3r8SIoluzYEqV71mwt1zCif4Zj7zwr63zZl5uptla1N_hmiraWfJaCTWQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 9,\n\t\"nproducto\":  29\n}"
+				},
+				"url": {
+					"raw": "https://pconvm269:28184/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"pconvm269"
+					],
+					"port": "28184",
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-Datos Ejecutivo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI2YmIyMjkyZC02ZDhkLTQwOWItOGFkMi0wNGRjM2M3MmU2MmMiLCJleHAiOjE1NzkxODEwNzksIm5iZiI6MCwiaWF0IjoxNTc5MTgwNzc5LCJpc3MiOiJodHRwczovL3Nzb3FhLmNuc3YuY2wvYXV0aC9yZWFsbXMvU3NvQ29uc29yY2lvQUQiLCJhdWQiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzdWIiOiIxMjgzNzg1NC0xZDZhLTRjZmItYjkyNy1jZDdlNWI5YzAwOTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtb3BlcmFjaW9uYWwiLCJzZXNzaW9uX3N0YXRlIjoiNTU3YzVkNzItOTJhNS00N2RjLTllN2ItNWRhMmM3NWFjYzdkIiwiY2xpZW50X3Nlc3Npb24iOiI1YmNlY2ViMy1jMDAwLTQ4YmMtYTUxYy0wMjQzZTIzMDA1NTYiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sImNuc3YtUnV0IjoiMTY5Mzc5NTkiLCJuYW1lIjoiQ3J1eiBMLCBQYWJsbyBDcnV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoicGZjcnV6IiwiZ2l2ZW5fbmFtZSI6IkNydXogTCwgUGFibG8iLCJmYW1pbHlfbmFtZSI6IkNydXoiLCJlbWFpbCI6InBhYmxvLmNydXpAY29uc29yY2lvLmNsIn0.I3-EZGlD21k4-PExT1MvvRY1_ygJ9JyrWYOASHSzJxvH8ENR73vmrAmPQp4XCrhkf0lPCFmnz6RKQGbSCXWFYTLmMPIQfcZZkSsKytJ6uoRHKWEP-etOv8L2QLoHFovQxUSoaIPwe2-oofnrlCZTzdSyRU4F3WJAhjA4GP7QKTKFOU_Y7U8k8mrGdlyTmaPY4QySQSlas688PEUv2lcYgObJuU7u8EHJ-EJgeNNR1uTFa1xgVEXXGvKSufVmXoqMyyBrazK4bdrX8_37TCNBC3r0qlwy-TbpOevm5mPPZq9Hgd7KdisvOtlgWKBhhqPF413ASQEZmo4fndfLFENnNA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nbranch\": 10,\n\t\"nproducto\": 13\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8181/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"ws-datos-ejecutivo",
+						"restcns",
+						"v1",
+						"getDatosEjecutivo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

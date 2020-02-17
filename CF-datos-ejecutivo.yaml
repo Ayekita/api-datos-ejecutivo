@@ -1,0 +1,153 @@
+Parameters:
+  apiName:
+    Type: String
+    Default: "api-datos-ejecutivo"
+  stageName:
+    Type: String
+    Default: "v1"
+  version:
+    Type: String
+    Default: "1.0.0"
+  VpcLinkId:
+    Type: String
+    Default: "nyed8l"
+  BaseUrl:
+    Type: String
+    Default: "desarrollo.cnsv.cl"
+  lambdaAuthFunction:
+    Type: String
+    Default: "arn:aws:lambda:us-east-1:649363401158:function:dev-autorizador-multitenant:off-internet-seguros"
+  stage:
+    Type: String
+    Default: "dev"
+  
+Resources:
+  MyRestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Body:
+        openapi: "3.0.1"
+        info:
+          title: !Ref apiName
+          version: !Ref version
+        paths:
+          /api/datosEjecutivo/getDatosEjecutivo:
+            post:
+              operationId: "getDatosEjecutivoPost"
+              consumes:
+              - "application/json"
+              produces:
+              - "application/json"
+              parameters:
+              - name: "Authorization"
+                in: "header"
+                required: true
+                schema:
+                  type: "string"
+              security:
+              - customAuth: []
+              x-amazon-apigateway-integration:
+                uri: "https://${stageVariables.baseUrl}/ws-datos-ejecutivo/restcns/v1/getDatosEjecutivo"
+                responses:
+                  default:
+                    statusCode: "200"
+                passthroughBehavior: "when_no_match"
+                connectionType: "VPC_LINK"
+                connectionId: "${stageVariables.vpcLinkId}"
+                httpMethod: "POST"
+                type: "http_proxy"
+                requestParameters:
+                  integration.request.header.Authorization: "method.request.header.Authorization"
+        components:
+          securitySchemes:
+            customAuth:
+              type: "apiKey"
+              name: "Authorization"
+              in: "header"
+              x-amazon-apigateway-authtype: "custom"
+              x-amazon-apigateway-authorizer:
+                authorizerUri:
+                  Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${lambdaAuthFunction}/invocations
+                authorizerResultTtlInSeconds: 300
+                authorizerCredentials:
+                  Fn::GetAtt:
+                    - "ApiGatewayCloudWatchLogsRole"
+                    - "Arn"
+                type: "token"
+      Description: !Sub ${stage}-${apiName} ${version}
+      Name: !Join [ "-", [ !Ref stage, !Ref apiName ] ]
+      Parameters:
+        endpointConfigurationTypes: REGIONAL
+  MyRestApiStage:
+    DependsOn:
+      - ApiGatewayAccount
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      DeploymentId:
+        Ref: ApiDeployment
+      MethodSettings:
+        - DataTraceEnabled: true
+          HttpMethod: "*"
+          LoggingLevel: INFO
+          ResourcePath: "/*"
+      RestApiId:
+        Ref: MyRestApi
+      StageName: !Ref stageName
+      Variables:
+        baseUrl: !Ref BaseUrl
+        vpcLinkId: !Ref VpcLinkId
+  ApiGatewayCloudWatchLogsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - apigateway.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: ApiGatewayLogsPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:DescribeLogGroups
+                  - logs:DescribeLogStreams
+                  - logs:PutLogEvents
+                  - logs:GetLogEvents
+                  - logs:FilterLogEvents
+                Resource: "*"
+        - PolicyName: ApiGatewaylambdaPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - lambda:invokeFunction
+                Resource: !Ref lambdaAuthFunction
+  ApiGatewayAccount:
+    Type: AWS::ApiGateway::Account
+    Properties:
+      CloudWatchRoleArn:
+        Fn::GetAtt:
+          - ApiGatewayCloudWatchLogsRole
+          - Arn
+  ApiDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn:
+      - MyRestApi
+    Properties:
+      RestApiId:
+        Ref: MyRestApi
+      StageName: ""
+
+Outputs:
+  ApiStageEndpoint:
+    Description: Endpoint de la stage desplegada de la API
+    Value: !Sub "https://${MyRestApi}.execute-api.${AWS::Region}.amazonaws.com/${stageName}/"
